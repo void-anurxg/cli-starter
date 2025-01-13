@@ -25,4 +25,4 @@ const installDeps = runCommand(installDepsCmd);
 if(!installDeps) process.exit(-1);
 
 console.log(`Ready to go! Follow the further commands to start the project...`);
-console.log(`cd ${repoName}`);  
+console.log(`cd ${repoName}`);      

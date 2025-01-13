@@ -1,0 +1,23 @@
+{
+    "extends": "fastify-tsconfig",
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "dist",
+        "sourceMap": true,
+        "moduleResolution": "Node",
+        "module": "CommonJS",
+        "target": "ES6",
+        "esModuleInterop": true,
+        "paths": {
+            "@/shared/prisma": ["src/shared/prisma/index.js"],
+            "@/shared/errors": ["src/shared/errors/index.js"],
+            "@/shared/*": ["src/shared/*"],
+            "@/app/services": ["src/app/services/index.js"],
+            "@/app/interfaces": ["src/app/interfaces/index.js"],
+            "@/app/repository": ["src/app/repository/index.js"],
+            "@/app/routes/common/*": ["src/app/routes/common/*"]
+        }
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "dist"]
+}
